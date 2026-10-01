@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">UserLAnd</string>
+    <string name="app_name">WhatsApp Bot Installer</string>
+    <string name="app_title">WhatsApp Bot Installer</string>
+    <string name="app_subtitle">Instale e execute seu Bot do WhatsApp (Baileys) no Alpine Linux</string>
+    <string name="btn_start_setup">Iniciar Configuração do Bot</string>
+    <string name="btn_resume_bot">Retomar Bot</string>
+    <string name="btn_open_session">Abrir Sessão</string>
+    <string name="btn_retry">Tentar Novamente</string>
+    <string name="status_idle">Aguardando início...</string>
+    <string name="status_downloading_alpine">Baixando Alpine Linux...</string>
+    <string name="status_extracting_system">Extraindo Sistema...</string>
+    <string name="status_configuring_nodejs">Configurando Node.js & Bot...</string>
+    <string name="status_bot_running">Bot rodando com sucesso!</string>
+    <string name="status_setup_failed">Falha na configuração</string>
+    <string name="status_session_exists">Sessão existente encontrada</string>
+    <string name="terminal_output">Saída do Terminal</string>
 </resources>

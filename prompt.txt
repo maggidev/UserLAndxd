@@ -1,0 +1,45 @@
+Atue como um desenvolvedor Android Senior especialista em Kotlin, Gradle, Shell Scripting e GitHub Actions.
+
+Preciso refatorar o repositório do UserLAnd (https://github.com/CypherpunkArmory/UserLAnd) para transformar o aplicativo em um instalador e executor dedicado para um Bot do WhatsApp baseado em Node.js (Baileys) rodando sobre Alpine Linux.
+
+O app não deve mais funcionar como um gerenciador genérico de distribuições Linux. Ele deve ter um fluxo único e automatizado para o usuário.
+
+---
+
+### REQUISITOS TÉCNICOS & MODIFICAÇÕES NO CÓDIGO
+
+#### 1. Modificação da Interface Gráfica (Kotlin / Layouts Android)
+- Remova ou oculte as telas/fragments de seleção múltipla de distribuições (AppsFragment / DistrosFragment / SessionsFragment).
+- Crie uma tela inicial (Dashboard / Main UI) personalizada com o seguinte fluxo:
+  - Botão "Iniciar Configuração do Bot" para disparar o processo.
+  - Indicador de progresso (ProgressBar / Status Label) exibindo os estados: "Baixando Alpine Linux", "Extraindo Sistema", "Configurando Node.js & Bot", "Rodando Bot".
+  - Uma área de visualização do terminal ou WebView integrada para capturar a saída do console e permitir o escaneamento do QR Code do Baileys.
+- Force o app a selecionar hardcoded apenas a distribuição Alpine Linux, pulando prompts de configuração de SSH/VNC padrão do usuário onde for possível.
+
+#### 2. Criação do Script de Bootstrap em Shell (Alpine + Node.js + Bot)
+- Crie um script em Shell (`setup_bot.sh`) que será injetado no ambiente do Alpine Linux para ser executado no primeiro boot da sessão do PRoot.
+- O script deve conter as seguintes etapas com verificação por arquivo de trava (`/var/log/bot_setup.done`):
+  1. Executar `apk update` e `apk add --no-cache nodejs npm git python3 make g++ ffmpeg` (dependências nativas para o Baileys e tratamento de mídia).
+  2. Clonar o repositório do bot de um parâmetro configurável ou repositório fixo (ex: `https://github.com/SEU_USUARIO/SEU_BOT_BAILEYS.git`) dentro de `/root/bot`.
+  3. Executar `cd /root/bot && npm install --production`.
+  4. Marcar o setup como concluído gerando o arquivo `/var/log/bot_setup.done`.
+  5. Iniciar a aplicação Node.js (`npm start` ou `node index.js`).
+
+#### 3. Integração do Script no Fluxo da Library
+- Modifique os arquivos de controle da biblioteca (`UserLAndLibrary`) para garantir que, assim que o ambiente PRoot do Alpine estiver montado, a linha de comando de inicialização execute o script `/root/setup_bot.sh`.
+
+#### 4. GitHub Actions (CI/CD Automático)
+- Crie ou atualize o arquivo `.github/workflows/build.yml` para compilar o APK automaticamente em todo push ou disparo manual (`workflow_dispatch`).
+- Configure o workflow para usar JDK 17, checkout recursivo de submódulos (`submodules: recursive`), e rodar `./gradlew assembleDebug`.
+- Exporte o arquivo `.apk` gerado como um artefato (`upload-artifact@v4`).
+
+---
+
+### ENTREGÁVEIS ESPERADOS
+
+1. A lista completa de arquivos criados e modificados com os respetivos caminhos no projeto.
+2. O código Kotlin atualizado da Activity/Fragment principal com o novo layout simples e focado no Bot.
+3. O script `setup_bot.sh` pronto e testado para Alpine Linux.
+4. O arquivo `.github/workflows/build.yml` completo pronto para execução na nuvem.
+
+Forneça os códigos prontos para aplicação direta no projeto.
