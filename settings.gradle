@@ -1,17 +1,4 @@
 rootProject.name = "UserLAnd"
-include ':app', ':UserLAndLibrary'
-project(':UserLAndLibrary').projectDir = new File('UserLAndLibrary/app')
-
+include ':app'
 include ':CustomLibrary'
 project(':CustomLibrary').projectDir = new File('CustomLibrary')
-
-// Replacement for the termux-app terminal; see UserLAndLibrary/terminal.
-include ':terminal'
-project(':terminal').projectDir = new File('UserLAndLibrary/terminal')
-
-include ':adbndk'
-project(':adbndk').projectDir = new File('../../adb-ndk/android')
-
-// Replacement for the bVNC client; see UserLAndLibrary/vnc.
-include ':vnc'
-project(':vnc').projectDir = new File('UserLAndLibrary/vnc')
