@@ -5,41 +5,124 @@ Code
 Pull requests
 Agents
 Build UserLAnd WhatsApp Bot Installer
-feat: configuracoes para automacao do bot no alpine #1
+feat: configuracoes para automacao do bot no alpin3 #2
 Annotations
-5 errors, 1 warning, and 1 notice
+4 warnings and 1 notice
 Build Debug APK
-failed 1 minute ago in 9s
+failed 1 minute ago in 17s
 2s
-4s
-Fetching the repository
-Determining the checkout info
-/usr/bin/git sparse-checkout disable
-/usr/bin/git config --local --unset-all extensions.worktreeConfig
-Checking out the ref
-Setting up auth for fetching submodules
-Fetching submodules
-  /usr/bin/git submodule sync --recursive
-  /usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
-  Submodule 'UserLAndLibrary' (https://github.com/CypherpunkArmory/UserLAndLibrary.git) registered for path 'UserLAndLibrary'
-  Cloning into '/home/runner/work/UserLAndxd/UserLAndxd/UserLAndLibrary'...
-  remote: Repository not found.
-  Error: fatal: repository 'https://github.com/CypherpunkArmory/UserLAndLibrary.git/' not found
-  Error: fatal: clone of 'https://github.com/CypherpunkArmory/UserLAndLibrary.git' into submodule path '/home/runner/work/UserLAndxd/UserLAndxd/UserLAndLibrary' failed
-  Failed to clone 'UserLAndLibrary'. Retry scheduled
-  Cloning into '/home/runner/work/UserLAndxd/UserLAndxd/UserLAndLibrary'...
-  remote: Repository not found.
-  Error: fatal: repository 'https://github.com/CypherpunkArmory/UserLAndLibrary.git/' not found
-  Error: fatal: clone of 'https://github.com/CypherpunkArmory/UserLAndLibrary.git' into submodule path '/home/runner/work/UserLAndxd/UserLAndxd/UserLAndLibrary' failed
-  Failed to clone 'UserLAndLibrary' a second time, aborting
-  Error: The process '/usr/bin/git' failed with exit code 1
+1s
+0s
+11s
+[===                                    ] 8% Computing updates...               
+[===                                    ] 10% Computing updates...              
+                                                                                
+Warning: Failed to find package 'tools'
+/home/runner/work/_actions/android-actions/setup-android/v3/dist/index.js:1823
+                error = new Error(`The process '${this.toolPath}' failed with exit code ${this.processExitCode}`);
+                        ^
+
+Error: The process '/usr/local/lib/android/sdk/cmdline-tools/16.0/bin/sdkmanager' failed with exit code 1
+    at ExecState._setResult (/home/runner/work/_actions/android-actions/setup-android/v3/dist/index.js:1823:25)
+    at ExecState.CheckComplete (/home/runner/work/_actions/android-actions/setup-android/v3/dist/index.js:1806:18)
+    at ChildProcess.<anonymous> (/home/runner/work/_actions/android-actions/setup-android/v3/dist/index.js:1700:27)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1141:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+
+Node.js v24.19.0
+[===                                    ] 10% Computing updates...              
 0s
 0s
 0s
 0s
 0s
 0s
+1s
 0s
 0s
+
+Skip to content
+UserLAndxd
+Repository navigation
+Code
+Pull requests
+Agents
+Build UserLAnd WhatsApp Bot Installer
+feat: configuracoes para automacao do bot no alpin3 #2
+Annotations
+1 error, 4 warnings, and 1 notice
+Lint Check
+failed 1 minute ago in 54s
+1s
+1s
 0s
 0s
+49s
+    	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+    	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+    	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+    	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+    	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+    	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+    	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+    	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+    	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+    	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+    	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+    	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+    	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+    	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+    	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+    	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+    	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+    	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+    	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+    	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+    	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+    	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+    	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+    	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
+    	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+    	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+    	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+    	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+    	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+    	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+    	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+    	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+    	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+    	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+    	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+    	at java.base/java.lang.Thread.run(Thread.java:840)
+    
+
+> Task :app:parseUserLAndDebugLocalResources
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':CustomLibrary:packageUserLAndDebugResources'.
+> /home/runner/work/UserLAndxd/UserLAndxd/CustomLibrary/src/UserLAnd/res/values/strings.xml:13:68: Error: The entity name must immediately follow the '&' in the entity reference.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 48s
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+13 actionable tasks: 13 executed
+Error: Process completed with exit code 1.
+0s
+0s
+1s
+0s
+

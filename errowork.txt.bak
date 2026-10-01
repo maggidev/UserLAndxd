@@ -1,0 +1,45 @@
+Skip to content
+UserLAndxd
+Repository navigation
+Code
+Pull requests
+Agents
+Build UserLAnd WhatsApp Bot Installer
+feat: configuracoes para automacao do bot no alpine #1
+Annotations
+5 errors, 1 warning, and 1 notice
+Build Debug APK
+failed 1 minute ago in 9s
+2s
+4s
+Fetching the repository
+Determining the checkout info
+/usr/bin/git sparse-checkout disable
+/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Checking out the ref
+Setting up auth for fetching submodules
+Fetching submodules
+  /usr/bin/git submodule sync --recursive
+  /usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+  Submodule 'UserLAndLibrary' (https://github.com/CypherpunkArmory/UserLAndLibrary.git) registered for path 'UserLAndLibrary'
+  Cloning into '/home/runner/work/UserLAndxd/UserLAndxd/UserLAndLibrary'...
+  remote: Repository not found.
+  Error: fatal: repository 'https://github.com/CypherpunkArmory/UserLAndLibrary.git/' not found
+  Error: fatal: clone of 'https://github.com/CypherpunkArmory/UserLAndLibrary.git' into submodule path '/home/runner/work/UserLAndxd/UserLAndxd/UserLAndLibrary' failed
+  Failed to clone 'UserLAndLibrary'. Retry scheduled
+  Cloning into '/home/runner/work/UserLAndxd/UserLAndxd/UserLAndLibrary'...
+  remote: Repository not found.
+  Error: fatal: repository 'https://github.com/CypherpunkArmory/UserLAndLibrary.git/' not found
+  Error: fatal: clone of 'https://github.com/CypherpunkArmory/UserLAndLibrary.git' into submodule path '/home/runner/work/UserLAndxd/UserLAndxd/UserLAndLibrary' failed
+  Failed to clone 'UserLAndLibrary' a second time, aborting
+  Error: The process '/usr/bin/git' failed with exit code 1
+0s
+0s
+0s
+0s
+0s
+0s
+0s
+0s
+0s
+0s

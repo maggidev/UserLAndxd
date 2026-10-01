@@ -31,9 +31,10 @@ jobs:
         uses: android-actions/setup-android@v3
         with:
           api-level: 35
-          ndk-version: r26c
+          ndk-version: r27c
           build-tools-version: '35.0.0'
-          cmake-version: '3.22.1'
+          cmake-version: '3.30.2'
+          emulator: false
 
       - name: Cache Gradle packages
         uses: actions/cache@v4
@@ -85,6 +86,15 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'gradle'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 35
+          ndk-version: r27c
+          build-tools-version: '35.0.0'
+          cmake-version: '3.30.2'
+          emulator: false
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
