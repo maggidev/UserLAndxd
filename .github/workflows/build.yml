@@ -19,10 +19,9 @@ jobs:
       contents: read
 
     steps:
-      - name: Clone repository manually
+      - name: Clone repository
         run: |
-          git clone --depth=0 https://github.com/maggidev/UserLAndxd.git .
-          git status
+          git clone https://github.com/maggidev/UserLAndxd.git .
           git log --oneline -1
 
       - name: Set up JDK 17
@@ -82,10 +81,9 @@ jobs:
     name: Lint Check
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repository manually
+      - name: Clone repository
         run: |
-          git clone --depth=0 https://github.com/maggidev/UserLAndxd.git .
-          git status
+          git clone https://github.com/maggidev/UserLAndxd.git .
           git log --oneline -1
 
       - name: Set up JDK 17
