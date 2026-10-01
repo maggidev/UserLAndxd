@@ -19,12 +19,11 @@ jobs:
       contents: read
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          submodules: false
-          fetch-depth: 0
-          clean: true
+      - name: Clone repository manually
+        run: |
+          git clone --depth=0 https://github.com/maggidev/UserLAndxd.git .
+          git status
+          git log --oneline -1
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -83,12 +82,11 @@ jobs:
     name: Lint Check
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          submodules: false
-          fetch-depth: 0
-          clean: true
+      - name: Clone repository manually
+        run: |
+          git clone --depth=0 https://github.com/maggidev/UserLAndxd.git .
+          git status
+          git log --oneline -1
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
